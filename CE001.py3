@@ -22,10 +22,7 @@ def fizzbuzz(inpt):
 # Sample code to read in test cases:
 
 test_cases = open(sys.argv[1], 'r')
-for i, test in enumerate(test_cases):
-    inpt, output = test.strip('\n').split('`')
-
-    assert fizzbuzz(inpt) == output, 'test {} failed'.format(i)
+for test in test_cases:
+    print(fizzbuzz(test))
 
 test_cases.close()
-
