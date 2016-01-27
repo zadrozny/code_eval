@@ -6,15 +6,16 @@
 
 
 import sys
-
+from copy import copy
 
 f = open(sys.argv[1], 'rU')                             # Load lines
 
 
 for l in f:
     x, n = [int(n) for n in l.strip('\n').split(',')]
+    v = copy(n)
     i = 1
-    while n < x:
-    	n*=i
-    	i+=1
-    print(n) 
+    while v < x:
+        v = i*n
+        i+=1
+    print(v) 
