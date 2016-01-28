@@ -16,10 +16,10 @@ def fib(n):
 
     if n == 1 or n == 2: return 1
     
-    last, current = 1, 1
+    preceding, current = 1, 1
     i = 2
     while i < n:
-        last, current = current, last + current
+        preceding, current = current, preceding + current
         i+=1
 
     return current
