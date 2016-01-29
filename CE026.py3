@@ -5,10 +5,10 @@
 # Print file size
 
 
+import os
 import sys
 
 f = sys.argv[1]                           # Load lines
 
 
-import os
 print(os.path.getsize(f))
